@@ -22,7 +22,7 @@ public class ItemController {
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<Item> get(@PathVariable long id) {
-        Item result = itemsRepository.getItemByID(id);
+        Item result = itemsRepository.getItemById(id);
         if (result == null) {
             return ResponseEntity.notFound().build();
         } else {

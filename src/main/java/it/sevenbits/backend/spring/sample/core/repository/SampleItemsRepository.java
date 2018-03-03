@@ -27,7 +27,7 @@ public class SampleItemsRepository implements ItemsRepository {
     }
 
     @Override
-    public Item getItemByID(long id) {
+    public Item getItemById(long id) {
         for (Item item : items) {
             if (item.getId() == id) {
                 return item;
@@ -45,11 +45,11 @@ public class SampleItemsRepository implements ItemsRepository {
 
     @Override
     public Item update(long id, Item newItem) {
-        return items.set(items.indexOf(getItemByID(id)), new Item(id,newItem.getName()));
+        return items.set(items.indexOf(getItemById(id)), new Item(id,newItem.getName()));
     }
 
     @Override
     public boolean delete(long id) {
-        return items.remove(getItemByID(id));
+        return items.remove(getItemById(id));
     }
 }

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ItemsRepository {
     List<Item> getAllItems();
-    Item getItemByID(long id);
+    Item getItemById(long id);
     Item create(Item newItem);
     Item update(long id, Item newItem);
     boolean delete(long id);

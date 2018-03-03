@@ -27,7 +27,7 @@ public class DatabaseItemsRepository implements ItemsRepository {
     }
 
     @Override
-    public Item getItemByID(long id) {
+    public Item getItemById(long id) {
         return jdbcOperations.queryForObject(
                 "SELECT id, name FROM item WHERE id = ?",
                 (resultSet, i) -> {
